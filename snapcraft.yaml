@@ -1,0 +1,15 @@
+name: hyperterm-snap  # the name of the snap
+version: 0  # the version of the snap
+summary: javascript terminal emulator
+description: sup
+confinement: devmode  # use "strict" to enforce system access only via declared interfaces
+
+apps:
+  hyperterm:
+    command: bin/hyperterm
+
+parts:
+    hyperterm:
+        plugin: hypertermpkg
+        source: https://github.com/zeit/hyperterm.git
+        source-type: git
